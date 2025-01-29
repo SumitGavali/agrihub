@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agriculture Government Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .news-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .news-card:hover {
+            transform: scale(1.03);
+        }
+
+        .highlight {
+            background-color: #28a745;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+         nav{
+            padding: 1rem 2rem;
+            justify-content: center;
+    align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c8e6c9;
+        }
+
+        header {
+            background-color: #28a745;
+            ;
+            color: white;
+            text-align: center;
+            padding: 2px 0;
+        }
+    </style>
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/crop.html">Crops</a>
+            <a href="/fertilizer.html">Fertilizers</a>
+            <a href="/buy-seeds.html">Buy Seeds</a>
+            <a href="/schemes.html">Govt Schemes</a>
+            <section id="google_translate_element"></section>
+        </nav>
+
+    </header>
+    <div class="container mt-4">
+        <h2 class="text-center mb-4 text-success">🌱 Agriculture Government Portal</h2>
+
+        <!-- Top Headlines -->
+        <div class="mb-4 p-3 bg-light border rounded">
+            <h4 class="text-success">Latest Updates</h4>
+            <marquee behavior="scroll" direction="left" class="text-danger">Government announces new subsidy for organic
+                farming | New wheat cultivation techniques introduced | National Agri-Policy 2025 coming soon!</marquee>
+        </div>
+
+        <div class="row" id="news-section">
+            <!-- News Articles will be dynamically added here -->
+            <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="653" height="450" rx="0" ry="0"></rect>
+        </div>
+    </div>
+    <h3 class="text-center text-danger">📊 Farmer Suicides in India (2015-2024)</h3>
+        <canvas id="suicideChart" width="400" height="200"></canvas>
+    <footer>
+        <p>&copy; 2025 Agriculture Ministry | Helpline: 1800-123-456 | <a href="/contact.html" style="color:white;">Contact Us</a></p>
+    </footer>
+    <style>
+          footer {
+            background-color: #005a29;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            const news = [
+                { title: "Crop protection industry seeks tax cuts, R&D incentives in Budget", content: "Union Budget: CropLife India on Friday urged the government to reduce goods and services tax (GST) on agrochemicals to 12 per cent and maintain a uniform 10 per cent basic customs duty for technical raw....", img: "https://img.etimg.com/thumb/msid-117515765,width-300,height-225,imgsize-233518,resizemode-75/india-budget-no-time-to-wait-indian-farmers-say-as-they-burn-crop-waste-despite-toxic-smog.jpg", link: "https://economictimes.indiatimes.com/news/economy/agriculture/crop-protection-industry-seeks-tax-cuts-rd-incentives-in-budget/articleshow/117515676.cms" },
+                { title: "Centre extends duty free imports of tur till March 2026", content: "Pune: The Centre on Tuesday extended duty free imports of tur or arhar by a year till March 2026 to temper retail food prices that are still ruling above the government’s comfort levels.", img: "https://img.etimg.com/thumb/msid-117426307,width-300,height-225,imgsize-802941,resizemode-75/tur-bccl.jpg", link: "https://economictimes.indiatimes.com/news/economy/agriculture/centre-extends-duty-free-imports-of-tur-till-march-2026/articleshow/117426336.cms" },
+                { title: "Budget 2025: Money for developing high-yielding, climate-resilient seeds", content: "NEW DELHI : The Union budget for FY26 is expected to announce a substantial increase in funding for research and development of high-quality and -yield hybrid seeds for pulses, edible oils and cotton—essential commodities whose shortages have led to an import spike—two people aware of the matter said.", img: "https://bloximages.chicago2.vip.townnews.com/pinalcentral.com/content/tncms/assets/v3/editorial/9/63/963d234e-9fc7-5042-be5d-11f691fb8105/5c093cbb3514c.image.jpg", link: "https://www.livemint.com/industry/agriculture/budget25-india-for-developing-high-yielding-climate-resilient-seeds-11737861337766.html" },
+                { title: "Govt may consider giving agri subsidies via direct benefit transfer: Shivraj Singh Chouhan", content: "The government is trying to bring policy-level changes for simplifying agriculture, Union Minister Shivraj Singh Chouhan on Monday said and indicated that providing subsidies on fertiliser, seed and....", img: "https://img.etimg.com/thumb/msid-117609914,width-300,height-225,imgsize-10854,resizemode-75/govt-plans-direct-farm-sales-aims-to-cut-middlemen-boost-farmer-income-chouhan.jpg", link: "https://economictimes.indiatimes.com/news/economy/agriculture/govt-may-consider-giving-agri-subsidies-via-direct-benefit-transfer-shivraj-singh-chouhan/articleshow/117609905.cms" },
+                { title: "Re 1 crop insurance scheme won't be discontinued, says Minister Kokate", content: "Manikrao Kokate on Sunday reiterated that the government will not discontinue the Re 1 crop insurance scheme despite recommendations to shut it down.", img: "https://img.etimg.com/thumb/msid-117576885,width-300,height-225,imgsize-100622,resizemode-75/inquiry-finds-4-lakh-bogus-applicants-for-crop-insurance-scheme-350cr-loss-averted.jpg",link: "https://economictimes.indiatimes.com/news/economy/agriculture/re-1-crop-insurance-scheme-wont-be-discontinued-says-minister-kokate/articleshow/117576863.cms" },
+                { title: "Source, stock and transport: Centre's plan for private firms in onion logistics  ", content: "New Delhi: Steep prices, rotting stocks and cartel concerns -    The heartburn that comes with onion harvests every year may become a thing of the past, with the government looking to sign up private firms for efficient storage and transport of the kitchen staple to supplement its own buffer stocks.", img: "https://www.livemint.com/lm-img/img/2025/01/20/600x338/PTI01-03-2025-000222B-0_1737370241025_1737370305167.jpg",link: "https://www.livemint.com/industry/agriculture/onion-buffer-stock-onion-prices-warehouse-consumer-affairs-ministry-export-curbs-perishable-commodities-11737352843139.html" }
+        ]
+
+            function renderNews() {
+                let newsHtml = "";
+                news.forEach(item => {
+                    newsHtml += `
+                        <div class="col-md-4 mb-4">
+                            <div class="card news-card">
+                                <img src="${item.img}" class="card-img-top" alt="News Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">${item.title}</h5>
+                                    <p class="card-text">${item.content}</p>
+                                    <a href="${item.link}" class="btn btn-success" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                $("#news-section").html(newsHtml);
+            }
+
+            renderNews();
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+        // Get the canvas element
+        const ctx = document.getElementById('suicideChart').getContext('2d');
+
+        // Data for the chart
+        const data = {
+            labels: ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+            datasets: [{
+                label: "Number of Farmer Suicides",
+                data: [12602, 11732, 10349, 10189, 10729, 11058, 9457, 9874, 10562, 10235], // Example data
+                backgroundColor: "rgba(255, 99, 132, 0.5)", // Red bars
+                borderColor: "rgba(255, 99, 132, 1)", // Red border
+                borderWidth: 1
+            }]
+        };
+
+        // Create the chart
+        new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                    x:{
+                        label:'Year'
+
+                    }
+                }
+            }
+        });
+    });
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="translate.js"></script>
+</body>
+
+</html>

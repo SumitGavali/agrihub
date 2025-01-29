@@ -1,0 +1,20 @@
+
+GOOGLE TRANSLATE 
+ <script type="text/javascript">
+        // Google Translate Initialization
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', // Original page language
+                includedLanguages: 'hi,ta,te,kn,ml,bn,gu,mr,pa,ur', // Add the languages you want to include for translation
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <!-- Load Google Translate API -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Google Translate Widget -->
+    <section id="google_translate_element"></section>
+
+    <!-- Add the "Translate" button -->
+    <button onclick="googleTranslateElementInit()">Translate</button>

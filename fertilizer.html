@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizers</title>
+
+    <link rel="stylesheet" href="fertilizers.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/crop.html">Crops</a>
+            <a href="/fertilizer.html">Fertilizers</a>
+            <a href="/buy-seeds.html">Buy Seeds</a>
+            <a href="/schemes.html">Govt Schemes</a>
+            <section id="google_translate_element"></section>
+        </nav>
+        <div class="brief-info">
+            <h2>Brief Information regarding fertilizers</h2>
+            <p>Indian agriculture has long been the backbone of the country's economy, supporting millions of farmers
+                and providing food security for the nation. To meet the growing demand for food and sustain agricultural
+                productivity, chemical fertilizers have played a crucial role. These fertilizers supply essential
+                nutrients to the soil, ensuring that crops grow healthily and yield optimally.</p>
+        </div>
+
+        <section id="Fertilizers">
+            <div class="filter-buttons">
+                <button onclick="filterFertilizers('nitrogen-based')">Nitrogen-Based</button>
+                <button onclick="filterFertilizers('phosphorus-based')">Phosphorus-Based</button>
+                <button onclick="filterFertilizers('potassium-based')">Potassium-Based</button>
+                <button onclick="filterFertilizers('complex-fertilizer')">Complex Fertilizers</button>
+                <button onclick="filterFertilizers('micronutrient-fertilizer')">Micronutrient Fertilizers</button>
+                <button onclick="showAll()">Show All</button>
+            </div>
+
+            <!-- Fertilizer Boxes Section -->
+            <div class="fertilizer-section nitrogen-based">
+                <div class="fertilizer-card">
+                    <h3>Urea</h3>
+                    <p>Used for: Rice (paddy), Wheat, Sugarcane, Cotton, Maize (corn)</p>
+                    <p>Content: Contains 46% nitrogen</p>
+                    <p>Price: ₹285/kg</p>
+                </div>
+                <div class="fertilizer-card">
+                    <h3>Ammonium Sulfate</h3>
+                    <p>Used for: Rice, Groundnut (peanuts), Cotton, Soybean, Vegetables</p>
+                    <p>Content: 21% nitrogen and 24% sulfur</p>
+                    <p>Price: ₹300 - ₹350/kg</p>
+                </div>
+                <div class="fertilizer-card">
+                    <h3>Calcium Ammonium Nitrate (CAN)</h3>
+                    <p>Used for: Cereals (wheat, barley), Rice, Sugarcane, Vegetables (tomatoes, onions, cabbage),
+                        Tobacco</p>
+                    <p>Content: 26% nitrogen</p>
+                    <p>Price: ₹310/kg</p>
+                </div>
+            </div>
+
+            <div class="fertilizer-section phosphorus-based">
+                <div class="fertilizer-card">
+                    <h3>Single Super Phosphate (SSP)</h3>
+                    <p>Used for: Wheat, Rice, Groundnut (peanuts), Cotton, Fruits (citrus, mango, apple)</p>
+                    <p>Content: 16 - 20% phosphorus</p>
+                    <p>Price: ₹180/kg</p>
+                </div>
+                <div class="fertilizer-card">
+                    <h3>Diammonium Phosphate (DAP)</h3>
+                    <p>Used for: Wheat, Rice, Chili (pepper), Potatoes, Cotton</p>
+                    <p>Content: 46% phosphorus and 18% nitrogen</p>
+                    <p>Price: ₹1,200/50kg bag</p>
+                </div>
+                <div class="fertilizer-card">
+                    <h3>Triple Super Phosphate (TSP)</h3>
+                    <p>Used for: Cereals (wheat, maize), Sugarcane, Fruits (citrus, mango, guava), Leguminous crops
+                        (peas, beans)</p>
+                    <p>Content: 44 - 48% phosphorus</p>
+                    <p>Price: ₹350/kg</p>
+                </div>
+            </div>
+
+            <div class="fertilizer-section potassium-based">
+                <div class="fertilizer-card">
+                    <h3>Muriate of Potash (MOP)</h3>
+                    <p>Used for: Rice, Sugarcane, Tomatoes, Bananas, Citrus (orange, lemon)</p>
+                    <p>Content: 60 - 62% potassium</p>
+                    <p>Price: ₹450/kg</p>
+                </div>
+                <div class="fertilizer-card">
+                    <h3>Potassium Sulfate (SOP)</h3>
+                    <p>Used for: Tomatoes, Rice, Fruits (apple, citrus), Cabbage & Cauliflower</p>
+                    <p>Content: 18% sulfur and 50% potassium</p>
+                    <p>Price: ₹500/kg</p>
+                </div>
+                <div class="fertilizer-card">
+                    <h3>Potassium Nitrate</h3>
+                    <p>Used for: Tomatoes, Fruits (grapes, citrus), Vegetables (lettuce, carrots), Potatoes</p>
+                    <p>Content: 13% nitrogen and 44% potassium</p>
+                    <p>Price: ₹550/kg</p>
+                </div>
+            </div>
+
+            <div class="fertilizer-section complex-fertilizer">
+                <div class="fertilizer-card">
+                    <h3>NPK Fertilizers</h3>
+                    <p>Used for: Various crops (depending on the NPK ratio)</p>
+                    <p>Content: Nitrogen (N), Phosphorus (P), Potassium (K)</p>
+                    <p>Price: ₹25-₹50 per kg (depending on the ratio)</p>
+                </div>
+                <div class="fertilizer-card">
+                    <h3>NP and PK Fertilizers</h3>
+                    <p>Used for: Crops needing specific nutrients (Nitrogen + Phosphorus or Phosphorus + Potassium)</p>
+                    <p>Content: Nitrogen + Phosphorus (NP) or Phosphorus + Potassium (PK)</p>
+                    <p>Price: ₹30-₹60 per kg</p>
+                </div>
+
+                <div class="fertilizer-card">
+                    <h3>Zinc Sulfate</h3>
+                    <p>Used for: Rice, Wheat, Maize</p>
+                    <p>Content: Zinc</p>
+                    <p>Price: ₹20-₹30 per kg</p>
+                </div>
+            </div>
+
+            <div class="fertilizer-section micronutrient-fertilizer">
+                <div class="fertilizer-card">
+                    <h3>Ferrous Sulfate</h3>
+                    <p>Used for: Crops with iron deficiency (e.g., vegetables)</p>
+                    <p>Content: Iron</p>
+                    <p>Price: ₹25-₹40 per kg</p>
+                </div>
+                <div class="fertilizer-card">
+                    <h3>Boron Fertilizers</h3>
+                    <p>Used for: Cotton, Sugarcane, Vegetables</p>
+                    <p>Content: Boron</p>
+                    <p>Price: ₹50-₹70 per kg</p>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <marquee>
+                <p>&copy; 2025 Indian Fertilizers Showcase.</p>
+            </marquee>
+        </footer>
+        <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="translate.js"></script>
+
+        <script src="/fertilizer.js"></script>
+</body>
+
+</html>

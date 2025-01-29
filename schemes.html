@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Schemes</title>
+
+    <link rel="stylesheet" href="schemes.css">
+</head>
+<body>
+    
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/crop.html">Crops</a>
+            <a href="/fertilizer.html">Fertilizers</a>
+            <a href="/buy-seeds.html">Buy Seeds</a>
+            <a href="/schemes.html">Govt Schemes</a>
+            <section id="google_translate_element"></section>
+
+            
+        </nav>
+        <header>
+        <h1>Government Schemes</h1>
+        <label for="scheme-dropdown">Select a Scheme Category:</label>
+        <select id="scheme-dropdown" onchange="showSchemes()">
+            <option value="select">--Select--</option>
+            <option value="farmer">Farmer Schemes</option>
+            <option value="women">Women Safety Schemes</option>
+            <option value="education">Educational Scholarship Schemes</option>
+            <option value="other">Other Government Schemes</option>
+        </select>
+    </header>
+
+   
+
+    <main id="scheme-list">
+        <p class="p1">The Government of India implements various schemes aimed at fostering economic growth, social welfare, and overall national development. These schemes cater to diverse areas, including agriculture, women empowerment, education, health, sanitation, and skill development. They play a pivotal role in addressing social inequalities, uplifting marginalized communities, and ensuring holistic progress across all sectors.</p>
+                        <hr />
+                        <h2>Types of Schemes</h2>
+                        <ol class="p1">
+                            <li><b>Sector-Specific Schemes:</b> Target specific areas such as agriculture, education, health, or women’s welfare.</li>
+                            <li><b>Social Welfare Schemes:</b> Focus on uplifting disadvantaged groups like Scheduled Castes (SC), Scheduled Tribes (ST), women, and economically weaker sections.</li>
+                            <li><b>Economic Development Schemes:</b> Drive innovation, entrepreneurship, and employment opportunities.</li>
+                            <li><b>Environmental Schemes:</b> Aim at sustainable development through green practices and resource conservation.</li>
+                        </ol>
+                        <h2>Structure of Schemes</h2>
+                        <ol class="p1">
+                            <li><b>Target Group:</b> Each scheme identifies a beneficiary group, such as farmers, students, women, or senior citizens.</li>
+                            <li><b>Funding Mechanism:</b> Some schemes are fully funded by the central government, while others are jointly financed by state and central governments.</li>
+                            <li><b>Implementation:</b> Schemes are implemented through various ministries, departments, and local bodies.</li>
+                        </ol>
+                        <hr/>
+                        <h2>Importance of Government Schemes</h2>
+                        <ol class="p1">
+                            <li><b>Reducing Poverty and Inequality</b><br> Government schemes provide direct benefits to economically weaker sections, reducing income disparities and improving living standards. Initiatives like PM-KISAN and Ayushman Bharat address fundamental issues such as income security and healthcare access, helping alleviate poverty in rural and urban areas.</li>
+                            <li><b>Promoting Inclusive Growth</b><br> Focused interventions for women, minorities, and marginalized groups foster inclusivity. Schemes like Beti Bachao Beti Padhao and Post-Matric Scholarships enable these communities to access education and economic opportunities, ensuring equal participation in the nation’s growth.</li>
+                            <li><b>Boosting Agricultural Productivity</b><br> Agriculture-centric schemes such as PMFBY, Soil Health Card, and KCC enhance farmers' resilience against natural calamities, improve soil quality, and ensure affordable credit. This strengthens the agricultural sector, which is the backbone of India's economy.</li>
+                            <li><b>Empowering Women and Ensuring Safety</b><br> Women-specific schemes like the Nirbhaya Fund and One Stop Centre Scheme enhance safety and provide legal and psychological support to survivors of violence. These initiatives empower women to lead secure and independent lives.</li>
+                            <li><b>Encouraging Education and Skill Development</b><br> Scholarships like Pragati and NMMSS, along with initiatives under the Skill India Mission, bridge gaps in education and vocational training. They prepare the youth for competitive employment markets and support the nation’s demographic dividend.</li>
+                            <li><b>Improving Healthcare and Sanitation</b><br>Schemes like Ayushman Bharat and Swachh Bharat Mission address crucial aspects of public health by ensuring access to healthcare services and promoting hygienic practices. These efforts reduce disease burdens and improve overall quality of life.</li>
+                            <li><b>Driving Digital and Technological Advancement</b><br> Programs like Digital India and Startup India create a robust digital infrastructure, support entrepreneurship, and promote innovation. These schemes empower citizens and businesses to thrive in a rapidly evolving global economy.</li>
+                            <li><b>Ensuring Environmental Sustainability</b><br> Environmental schemes such as the National Solar Mission and National Afforestation Programme focus on renewable energy adoption, afforestation, and sustainable practices. These initiatives align with global efforts to combat climate change and protect biodiversity.</li>
+                        </ol>
+                        <hr/>
+                        <h2>Significance in Nation Building</h2>
+                        <p class="p1">Government schemes are vital tools for nation-building as they address immediate challenges while laying the foundation for long-term development. Their importance can be understood through the following points:</p>
+                        <ol class="p1">
+                            <li><b>Economic Stability:</b> They drive investment, reduce economic uncertainties, and provide financial security to vulnerable populations.</li>
+                            <li><b>Social Harmony:</b> By addressing inequalities and fostering empowerment, these schemes contribute to societal peace and cohesion.</li>
+                            <li><b>Global Commitments:</b> Many initiatives align with international goals like the Sustainable Development Goals (SDGs), enhancing India's global standing.</li>
+                            <li><b>Infrastructure Development:</b> Large-scale projects improve connectivity, housing, and urban-rural linkages, boosting economic and social integration.</li>
+                        </ol>
+                        <hr/>
+                        <footer>
+                            <p class="footer">Copyright &copy; 2025 GOI Archives. All Rights Reserved.</p>
+                        </footer>
+    </main>
+
+    <script>
+        function showSchemes() {
+            const dropdown = document.getElementById('scheme-dropdown');
+            const selectedValue = dropdown.value;
+            const schemeList = document.getElementById('scheme-list');
+
+            let schemes = '';
+
+            switch (selectedValue) {
+                case 'select':
+                    schemes = `
+                        <p class="p1">The Government of India implements various schemes aimed at fostering economic growth, social welfare, and overall national development. These schemes cater to diverse areas, including agriculture, women empowerment, education, health, sanitation, and skill development. They play a pivotal role in addressing social inequalities, uplifting marginalized communities, and ensuring holistic progress across all sectors.</p>
+                        <hr />
+                        <h2>Types of Schemes</h2>
+                        <ol class="p1">
+                            <li><b>Sector-Specific Schemes:</b> Target specific areas such as agriculture, education, health, or women’s welfare.</li>
+                            <li><b>Social Welfare Schemes:</b> Focus on uplifting disadvantaged groups like Scheduled Castes (SC), Scheduled Tribes (ST), women, and economically weaker sections.</li>
+                            <li><b>Economic Development Schemes:</b> Drive innovation, entrepreneurship, and employment opportunities.</li>
+                            <li><b>Environmental Schemes:</b> Aim at sustainable development through green practices and resource conservation.</li>
+                        </ol>
+                        <h2>Structure of Schemes</h2>
+                        <ol class="p1">
+                            <li><b>Target Group:</b> Each scheme identifies a beneficiary group, such as farmers, students, women, or senior citizens.</li>
+                            <li><b>Funding Mechanism:</b> Some schemes are fully funded by the central government, while others are jointly financed by state and central governments.</li>
+                            <li><b>Implementation:</b> Schemes are implemented through various ministries, departments, and local bodies.</li>
+                        </ol>
+                        <hr/>
+                        <h2>Importance of Government Schemes</h2>
+                        <ol class="p1">
+                            <li><b>Reducing Poverty and Inequality</b><br> Government schemes provide direct benefits to economically weaker sections, reducing income disparities and improving living standards. Initiatives like PM-KISAN and Ayushman Bharat address fundamental issues such as income security and healthcare access, helping alleviate poverty in rural and urban areas.</li>
+                            <li><b>Promoting Inclusive Growth</b><br> Focused interventions for women, minorities, and marginalized groups foster inclusivity. Schemes like Beti Bachao Beti Padhao and Post-Matric Scholarships enable these communities to access education and economic opportunities, ensuring equal participation in the nation’s growth.</li>
+                            <li><b>Boosting Agricultural Productivity</b><br> Agriculture-centric schemes such as PMFBY, Soil Health Card, and KCC enhance farmers' resilience against natural calamities, improve soil quality, and ensure affordable credit. This strengthens the agricultural sector, which is the backbone of India's economy.</li>
+                            <li><b>Empowering Women and Ensuring Safety</b><br> Women-specific schemes like the Nirbhaya Fund and One Stop Centre Scheme enhance safety and provide legal and psychological support to survivors of violence. These initiatives empower women to lead secure and independent lives.</li>
+                            <li><b>Encouraging Education and Skill Development</b><br> Scholarships like Pragati and NMMSS, along with initiatives under the Skill India Mission, bridge gaps in education and vocational training. They prepare the youth for competitive employment markets and support the nation’s demographic dividend.</li>
+                            <li><b>Improving Healthcare and Sanitation</b><br>Schemes like Ayushman Bharat and Swachh Bharat Mission address crucial aspects of public health by ensuring access to healthcare services and promoting hygienic practices. These efforts reduce disease burdens and improve overall quality of life.</li>
+                            <li><b>Driving Digital and Technological Advancement</b><br> Programs like Digital India and Startup India create a robust digital infrastructure, support entrepreneurship, and promote innovation. These schemes empower citizens and businesses to thrive in a rapidly evolving global economy.</li>
+                            <li><b>Ensuring Environmental Sustainability</b><br> Environmental schemes such as the National Solar Mission and National Afforestation Programme focus on renewable energy adoption, afforestation, and sustainable practices. These initiatives align with global efforts to combat climate change and protect biodiversity.</li>
+                        </ol>
+                        <hr/>
+                        <h2>Significance in Nation Building</h2>
+                        <p class="p1">Government schemes are vital tools for nation-building as they address immediate challenges while laying the foundation for long-term development. Their importance can be understood through the following points:</p>
+                        <ol class="p1">
+                            <li><b>Economic Stability:</b> They drive investment, reduce economic uncertainties, and provide financial security to vulnerable populations.</li>
+                            <li><b>Social Harmony:</b> By addressing inequalities and fostering empowerment, these schemes contribute to societal peace and cohesion.</li>
+                            <li><b>Global Commitments:</b> Many initiatives align with international goals like the Sustainable Development Goals (SDGs), enhancing India's global standing.</li>
+                            <li><b>Infrastructure Development:</b> Large-scale projects improve connectivity, housing, and urban-rural linkages, boosting economic and social integration.</li>
+                        </ol>
+                        <hr/>
+                        <footer>
+                            <p class="footer">Copyright &copy; 2025 GOI Archives. All Rights Reserved.</p>
+                        </footer>
+                    `;
+                    break;
+                case 'farmer':
+                    schemes = `
+                        <h2>Farmer Schemes</h2>
+                        <p class="p1">India's agricultural sector supports nearly 58% of the population. The government implements various schemes to ensure the welfare of farmers and enhance agricultural productivity:</p>
+                        <hr/>
+                        <h3><b>a. Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Provides direct financial support to small and marginal farmers.</li>
+                            <li><b>Benefits:</b> Farmers receive ₹6,000 per year in three equal installments.</li>
+                            <li><b>Importance:</b> Helps farmers manage input costs and sustain agricultural operations.</li>
+                            <li><b>Official Link:</b> <a href="https://pmkisan.gov.in/">pmkisan.gov.in</a></li>
+                        </ul>
+                        <h3><b>b. Pradhan Mantri Fasal Bima Yojana (PMFBY)</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Provides crop insurance to farmers to protect them against natural calamities.</li>
+                            <li><b>Benefits:</b> Covers risks like floods, droughts, and pest attacks.</li>
+                            <li><b>Importance:</b> Reduces financial distress caused by crop failure.</li>
+                            <li><b>Official Link:</b> <a href="https://pmfby.gov.in/">pmfby.gov.in</a></li>
+                        </ul>
+                        <h3><b>c. Soil Health Card Scheme</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Promotes balanced nutrient use and improves soil quality.</li>
+                            <li><b>Benefits:</b> Farmers receive a card with recommendations for nutrient management.</li>
+                            <li><b>Importance:</b> Encourages sustainable farming practices.</li>
+                            <li><b>Official Link:</b> <a href="https://soilhealth.dac.gov.in/home">soilhealth.dac.gov.in</a></li>
+                        </ul>
+                        <h3><b>d. Kisan Credit Card (KCC)</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Offers credit access to farmers for agriculture-related expenses.</li>
+                            <li><b>Benefits:</b> Low-interest loans for farming, equipment, and livestock.</li>
+                            <li><b>Importance:</b> Prevents farmers from falling into the trap of informal loans.</li>
+                            <li><b>Official Link:</b> <a href="https://agricoopgov.org/">agricoopgov.org</a></li>
+                        </ul><hr/>
+                        <footer>
+                            <p class="footer">Copyright &copy; 2025 GOI Archives. All Rights Reserved.</p>
+                        </footer>
+                        `;
+                    break;
+                case 'women':
+                    schemes = `
+                        <h2>Women Safety Schemes</h2>
+                        <p class="p1">To ensure the safety, dignity, and empowerment of women, the Government of India has launched several safety and protection schemes:</p>
+                        <hr/>
+                        <h3><b>a. One Stop Centre Scheme (Sakhi)</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Provides integrated support to women affected by violence.</li>
+                            <li><b>Benefits:</b> Offers legal, medical, and psychological assistance under one roof.</li>
+                            <li><b>Importance:</b> Helps assault survivors rebuild their lives.</li>
+                            <li><b>Official Link:</b> <a href="https://wcd.gov.in/">wcd.gov.in</a></li>
+                        </ul>
+                        <h3><b>b. Beti Bachao Beti Padhao (BBBP)</h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Addresses declining child sex ratios and promotes girl child education.</li>
+                            <li><b>Benefits:</b> Focuses on awareness and education campaigns.</li>
+                            <li><b>Importance:</b> Enhances the status of women in society.</li>
+                            <li><b>Official Link:</b> <a href="https://www.betibachaobetipadhao.co.in/">betibachaobetipadhao.co.in</a></li>
+                        </ul>
+                        <h3><b>c. Nirbhaya Fund</h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Funds projects for women’s safety, including CCTV surveillance and helpline services.</li>
+                            <li><b>Benefits:</b> Strengthens law enforcement and victim support systems.</li>
+                            <li><b>Importance:</b> Enhances safety in public spaces.</li>
+                            <li><b>Official Link:</b> <a href="https://xn--i1b5bzbybhfo5c8b4bxh.xn--11b7cb3a6a.xn--h2brj9c/en">mha.gov.in</a></li>
+                        </ul>
+                        <h3><b>d. Mahila Police Volunteers (MPVs)</h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Creates a link between law enforcement and communities to report violence.</li>
+                            <li><b>Benefits:</b> Encourages community involvement in safety initiatives.</li>
+                            <li><b>Importance:</b> Builds trust and improves reporting mechanisms.</li>
+                            <li><b>Official Link:</b> <a href="https://wcd.gov.in/">wcd.gov.in</a></li>
+                        </ul><hr/>
+                        <footer>
+                            <p class="footer">Copyright &copy; 2025 GOI Archives. All Rights Reserved.</p>
+                        </footer>
+                    `;
+                    break;
+                case 'education':
+                    schemes = `
+                        <h2>Educational Scholarship Schemes</h2>
+                        <p class="p1">To ensure equitable access to education, the government has launched various scholarship programs:</p>
+                        <hr/>
+                        <h3><b>a. National Means-cum-Merit Scholarship Scheme (NMMSS)</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Provides scholarships to meritorious students from economically weaker sections.</li>
+                            <li><b>Benefits:</b> ₹12,000 annually for eligible students in Class IX and above.</li>
+                            <li><b>Importance:</b> Encourages education and reduces dropout rates.</li>
+                            <li><b>Official Link:</b> <a href="https://www.education.gov.in/">education.gov.in</a></li>
+                        </ul>
+                        <h3><b>b. Post-Matric Scholarship for SC/ST Students</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Supports higher education for Scheduled Caste and Scheduled Tribe students.</li>
+                            <li><b>Benefits:</b> Covers tuition fees and other expenses.</li>
+                            <li><b>Importance:</b> Promotes social inclusivity and academic progress.</li>
+                            <li><b>Official Link:</b> <a href="https://scholarships.gov.in/">scholarships.gov.in</a></li>
+                        </ul>
+                        <h3><b>c. Pragati Scholarship for Girl Students</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Empowers women in technical education.</li>
+                            <li><b>Benefits:</b> ₹50,000 annually for up to 4 years.</li>
+                            <li><b>Importance:</b> Boosts female representation in technical fields.</li>
+                            <li><b>Official Link:</b> <a href="https://aicte-india.org/">aicte-india.org</a></li>
+                        </ul>
+                        <h3><b>d. Prime Minister's Research Fellowship (PMRF)</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Encourages innovation and research among doctoral candidates.</li>
+                            <li><b>Benefits:</b> ₹70,000 to ₹80,000 stipend monthly, plus a research grant.</li>
+                            <li><b>Importance:</b> Fosters advanced research and innovation in India.</li>
+                            <li><b>Official Link:</b> <a href="https://www.pmrf.in/">pmrf.in</a></li>
+                        </ul><hr/>
+                        <footer>
+                            <p class="footer">Copyright &copy; 2025 GOI Archives. All Rights Reserved.</p>
+                        </footer>
+                    `;
+                    break;
+                case 'other':
+                    schemes = `
+                        <h2>Other Government Schemes</h2>
+                        <p class="p1">Beyond specific sectors, the government also runs broad welfare schemes:</p>
+                        <hr/>
+                        <h3><b>a. Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Provides health insurance to low-income families.</li>
+                            <li><b>Benefits:</b> Coverage of up to ₹5 lakhs per family annually.</li>
+                            <li><b>Importance:</b> Reduces healthcare costs and ensures access to medical services.</li>
+                            <li><b>Official Link:</b> <a href="https://pmjay.gov.in/">pmjay.gov.in</a></li>
+                        </ul>
+                        <h3><b>b. Swachh Bharat Mission (SBM)</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Promotes sanitation and eradication of open defecation.</li>
+                            <li><b>Benefits:</b> Builds toilets and promotes waste management.</li>
+                            <li><b>Importance:</b> Improves public health and hygiene.</li>
+                            <li><b>Official Link:</b> <a href="https://swachhbharatmission.ddws.gov.in/">swachhbharatmission.gov.in</a></li>
+                        </ul>
+                        <h3><b>c. Digital India Mission</b></h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Transforms India into a digitally empowered society.</li>
+                            <li><b>Benefits:</b> E-governance, digital payments, and digital infrastructure development.</li>
+                            <li><b>Importance:</b> Reduces the digital divide and boosts economic growth.</li>
+                            <li><b>Official Link:</b> <a href="https://www.digitalindia.gov.in/">digitalindia.gov.in</a></li>
+                        </ul>
+                        <h3><b>d. Atal Pension Yojana (APY)</h3>
+                        <ul class="p1">
+                            <li><b>Objective:</b> Ensures old-age income security.</li>
+                            <li><b>Benefits:</b> Provides a fixed pension after retirement.</li>
+                            <li><b>Importance:</b> Supports unorganized sector workers.</li>
+                            <li><b>Official Link:</b> <a href="https://www.npscra.nsdl.co.in/">npscra.nsdl.co.in</a></li>
+                        </ul>
+                        <footer>
+                            <p class="footer">Copyright &copy; 2025 GOI Archives. All Rights Reserved.</p>
+                        </footer>
+                    `;
+                    break;
+                default:
+                    schemes = '';
+            }
+
+            schemeList.innerHTML = schemes;
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="translate.js"></script>
+    
+</body>
+</html>

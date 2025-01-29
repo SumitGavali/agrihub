@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buy Seeds</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .seed-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .seed-card:hover {
+            transform: scale(1.05);
+        }
+
+        .know-more-btn {
+            margin-top: 10px;
+        }
+        nav{
+            padding: 1rem 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c8e6c9;
+        }
+
+        header {
+            background-color: #28a745;
+            ;
+            color: white;
+            text-align: center;
+            padding: 2px 0;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/crop.html">Crops</a>
+        <a href="/fertilizer.html">Fertilizers</a>
+        <a href="/buy-seeds.html">Buy Seeds</a>
+        <a href="/schemes.html">Govt Schemes</a>
+       
+    </nav>
+</header>
+    <!-- Google Translate Widget -->
+    <div class="container mt-3">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">🌾 Information about Seeds</h2>
+
+        <div class="row" id="seed-list">
+            <!-- Seed items will be dynamically inserted here using jQuery -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="translate.js"></script>
+        
+    <script>
+       
+        $(document).ready(function () {
+            const seeds = [
+                { id: 1, name: "Wheat Seeds", price: 100, img: "https://m.media-amazon.com/images/I/714xCG6CxKL.jpg ",  height: 300  },
+                { id: 2, name: "Rice Seeds", price: 120, img: "https://m.media-amazon.com/images/I/81Voy6TeZtL.jpg", height: 300   },
+                { id: 3, name: "Corn Seeds", price: 90, img: "https://m.media-amazon.com/images/I/71iUXwl3vAL._AC_UF1000,1000_QL80_.jpg", height: 300  },
+                { id: 4, name: "Soybean Seeds", price: 130, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwIAfvRi5DUl_RtX6va21L3OGKNbVP-TULVQ&s", height: 300  },
+                { id: 5, name: "Mustard Seeds", price: 110, img: "https://india.neelamfoodland.in/cdn/shop/products/IMG_6567_1200x.jpg?v=1734378454", height: 300  },
+                { id: 6, name: "Cotton Seeds", price: 140, img: "https://5.imimg.com/data5/SELLER/Default/2024/3/400318533/CZ/BF/CX/18861196/cotton-seeds.png" , height: 300 },
+                { id: 7, name: "Barley Seeds", price: 105, img: "https://m.media-amazon.com/images/I/81nKwM06HpL.jpg" , height: 300 },
+                { id: 8, name: "Gram Seeds", price: 95, img: "https://tiimg.tistatic.com/fp/1/008/194/pure-sunlight-dried-a-grade-hybrid-edible-gram-seed-for-agriculture-629.jpg" , height: 300 },
+                { id: 9, name: "Peanut Seeds", price: 150, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ia8KieLnPuBeGRhMS9TcRoO-HfxENOOfSQ&s", height: 300  },
+                { id: 10, name: "Chili Seeds", price: 80, img: "https://5.imimg.com/data5/SELLER/Default/2022/2/GX/SJ/XL/23054759/dry-red-chilli-seeds.jpg" , height: 300 },
+                { id: 11, name: "Tomato Seeds", price: 110, img: "https://seed2plant.in/cdn/shop/products/62.png?v=1615875365&width=416", height: 300  },
+                { id: 12, name: "Brinjal Seeds", price: 100, img: "https://www.naatigrains.com/image/cache/catalog/naatigrains-products/NG159/brinjal-green-blue-seed-vitamins-nutrition-order-vegetable-naatigrains-1000x1000.jpg", height: 300  },
+                { id: 13, name: "Cabbage Seeds", price: 120, img: "https://5.imimg.com/data5/SELLER/Default/2021/5/AH/OH/TO/12014459/cabbage-seeds.jpg", height: 300  },
+                { id: 14, name: "Onion Seeds", price: 130, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp_aoya7wvqT7lgSg0pLOt1CljUj6OiDwNow&s" , height: 300 },
+                { id: 15, name: "Carrot Seeds", price: 90, img: "https://rukminim2.flixcart.com/image/850/1000/k63xle80/plant-seed/4/f/m/100-carrot-seeds-100-gram-nature-green-original-imafzmgrj5bcqgua.jpeg?q=20&crop=false", height: 300  },
+                { id: 16, name: "Cauliflower Seeds", price: 110, img: "https://vgrgardens.com/wp-content/uploads/2024/11/cauliflower-seeds-500x500-1.webp" , height: 300 },
+                { id: 17, name: "Pumpkin Seeds", price: 100, img: "https://5.imimg.com/data5/SELLER/Default/2022/10/YS/AA/JV/68630323/pumpkin-seeds-500x500.png", height: 300  },
+                { id: 18, name: "Spinach Seeds", price: 95, img: "https://gachwala.in/wp-content/uploads/2022/07/816WJpbodaL._SX569_.jpg", height: 300  },
+                { id: 19, name: "Peas Seeds", price: 85, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvnH-C_L94V-k3qYvhb2Es4Y36fFqbuTYUdA&s", height: 300  },
+                { id: 20, name: "Cucumber Seeds", price: 120, img: "https://m.media-amazon.com/images/I/51msmsp4ItL._AC_UF1000,1000_QL80_.jpg", height: 300  }
+            ];
+
+            function renderSeeds() {
+                let seedHtml = "";
+                seeds.forEach(seed => {
+                    seedHtml += `
+                        <div class="col-md-4 mb-4">
+                            <div class="card seed-card">
+                            
+                                <div class="card-body text-center">
+                                    <img src="${seed.img}" class="card-img-top" alt="${seed.name}" style="height: ${seed.height}px; object-fit: cover;
+                                    <h5 class="card-title">${seed.name}</h5>
+                                    <p class="card-text">Price: ₹${seed.price}</p>
+                                    <a href="https://www.ugaoo.com/collections/seeds?srsltid=AfmBOoqkTSd6BCL12TOVgpxC8XVCUb3waOxxGlNAHpvSKqeh0XPUF3sH" class="btn btn-info know-more-btn" target="_blank">Know More</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                $("#seed-list").html(seedHtml);
+            }
+
+            renderSeeds();
+        });
+    </script>
+
+</body>
+
+</html>

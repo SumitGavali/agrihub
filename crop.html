@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Crops Showcase</title>
+    <link rel="stylesheet" href="/crop.css">
+  
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/crop.html">Crops</a>
+            <a href="/fertilizer.html">Fertilizers</a>
+            <a href="/buy-seeds.html">Buy Seeds</a>
+            <a href="/schemes.html">Govt Schemes</a>
+            <section id="google_translate_element"></section>
+        </nav>
+    </header>
+     <!-- Google Translate Widget -->
+   
+
+     <!-- Add the "Translate" button -->
+    
+    <div class="head">
+        <h3>Indian Crops Showcase</h3>
+        <p>Discover various crops grown in India with their seasons, durations, and farming methods.</p>
+            
+    </div>
+   
+    <section id="flowchart">
+        <h2>Crop Seasons in India</h2>
+        <div><img
+                src="https://scontent.fpnq12-1.fna.fbcdn.net/v/t1.6435-9/166722284_1426967327653766_4248859543519390467_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=P9JUT1azz80Q7kNvgEzMQET&_nc_zt=23&_nc_ht=scontent.fpnq12-1.fna&_nc_gid=AuB2ssXfurosmobKVBsUXYb&oh=00_AYBWvL5rdWh3fBFoOBHd81wFwm4pIzlUOjpxMcTZM4nINg&oe=67A48A28"
+                height="273" alt="Crop Flowchart" /></div>
+        <p>Kharif (June to October) | Rabi (November to April) | Zaid (March to June)</p>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section id="filters">
+        <h2>Search Crops</h2>
+        <br>
+        <input type="text" id="searchBar" placeholder="Search for crops...">
+        <select id="seasonFilter">
+            <option value="all">All Seasons</option>
+            <option value="kharif">Kharif</option>
+            <option value="rabi">Rabi</option>
+            <option value="zaid">Zaid</option>
+        </select>
+        <select id="durationFilter">
+            <option value="all">All Durations</option>
+            <option value="short">Short (up to 3 months)</option>
+            <option value="medium">Medium (3-6 months)</option>
+            <option value="long">Long (6+ months)</option>
+        </select>
+    </section>
+    
+     <section id="cropCards">
+      
+        <div class="crop-card" data-season="kharif" data-duration="short">
+            <h3>Rice</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 3-4 months</p>
+            <p>Method: Traditional & Modern</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="medium">
+            <h3>Maize</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 4-5 months</p>
+            <p>Method: Traditional & Modern</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="short">
+            <h3>Millets</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 3-4 months</p>
+            <p>Method: Organic</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="medium">
+            <h3>Sorghum</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 4-5 months</p>
+            <p>Method: Traditional</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="medium">
+            <h3>Cotton</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 5-6 months</p>
+            <p>Method: Modern Techniques</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="medium">
+            <h3>Soybean</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 4-5 months</p>
+            <p>Method: Modern Techniques</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="short">
+            <h3>Groundnut</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 3-4 months</p>
+            <p>Method: Traditional</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="short">
+            <h3>Pulses</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 3-4 months</p>
+            <p>Method: Organic</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="long">
+            <h3>Sugarcane</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 10-12 months</p>
+            <p> Requires a long growing season with hot and humid conditions.</p>
+        </div>
+        <div class="crop-card" data-season="kharif" data-duration="long">
+            <h3>Cotton</h3>
+            <p>Season: Kharif</p>
+            <p>Duration: 6-9 months</p>
+            <p> Requires a warm climate and moderate rainfall</p>
+        </div>
+
+       
+        <div class="crop-card" data-season="rabi" data-duration="medium">
+            <h3>Wheat</h3>
+            <p>Season: Rabi</p>
+            <p>Duration: 4-5 months</p>
+            <p>Method: Modern Techniques</p>
+        </div>
+        <div class="crop-card" data-season="rabi" data-duration="short">
+            <h3>Barley</h3>
+            <p>Season: Rabi</p>
+            <p>Duration: 3-4 months</p>
+            <p>Method: Traditional</p>
+        </div>
+        <div class="crop-card" data-season="rabi" data-duration="short">
+            <h3>Mustard</h3>
+            <p>Season: Rabi</p>
+            <p>Duration: 3-4 months</p>
+            <p>Method: Modern Techniques</p>
+        </div>
+        <div class="crop-card" data-season="rabi" data-duration="medium">
+            <h3>Peas</h3>
+            <p>Season: Rabi</p>
+            <p>Duration: 4-5 months</p>
+            <p>Method: Organic</p>
+        </div>
+        <div class="crop-card" data-season="rabi" data-duration="short">
+            <h3>Chickpea</h3>
+            <p>Season: Rabi</p>
+            <p>Duration: 3-4 months</p>
+            <p>Method: Traditional</p>
+        </div>
+        <div class="crop-card" data-season="rabi" data-duration="short">
+            <h3>Lentils</h3>
+            <p>Season: Rabi</p>
+            <p>Duration: 3-4 months</p>
+            <p>Method: Organic</p>
+        </div>
+
+        
+        <div class="crop-card" data-season="zaid" data-duration="short">
+            <h3>Watermelon</h3>
+            <p>Season: Zaid</p>
+            <p>Duration: 2-3 months</p>
+            <p>Method: Organic</p>
+        </div>
+        <div class="crop-card" data-season="zaid" data-duration="long">
+            <h3>Tea</h3>
+            <p>Season: Perennial</p>
+            <p>Duration:7-9 months</p>
+            <p>Method: Grown mainly in hilly areas with consistent rainfall.
+            </p>
+        </div>
+        <div class="crop-card" data-season="zaid" data-duration="long">
+            <h3>Coffee</h3>
+            <p>Season: Perennial</p>
+            <p>Duration: 6-8 months</p>
+            <p>Method: Requires a warm climate and high altitude.</p>
+        </div>
+        <div class="crop-card" data-season="zaid" data-duration="long">
+            <h3>Coconut</h3>
+            <p>Season: Perennial</p>
+            <p>Duration: 6-8 months</p>
+            <p>Method: Grown in tropical coastal regions.</p>
+        </div>
+        <div class="crop-card" data-season="zaid" data-duration="long">
+            <h3>Banana</h3>
+            <p>Season: Perennial</p>
+            <p>Duration: 9-12 months</p>
+            <p>Requires a warm climate and adequate water.</p>
+        </div>
+        <div class="crop-card" data-season="zaid" data-duration="long">
+            <h3>Clove</h3>
+            <p>Season: Perennial</p>
+            <p>Duration: 8-12 months</p>
+            <p>Requires well-drained soil and a humid climate.
+            </p>
+        </div>
+        <div class="crop-card" data-season="zaid" data-duration="long">
+            <h3>Rubber</h3>
+            <p>Season: Perennial</p>
+            <p>Duration: 6-7 months</p>
+            <p>Requires a hot, humid climate.
+            </p>
+        </div>
+
+    </section>
+
+   
+    <footer>
+       <marquee> <p>&copy; 2025 Indian Crops Showcase. </p></marquee>
+    </footer>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="translate.js"></script>
+    
+    <script src="/crop.js"></script>
+</body>
+
+</html>
